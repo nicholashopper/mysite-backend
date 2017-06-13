@@ -19,7 +19,7 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.views.generic import TemplateView
 urlpatterns = [
     url(r'^api/', include('blog.urls')),
-    url(r'^admin/', admin.site.urls),
+    url(r'^admin.*', admin.site.urls),
 ]
 
 admin.autodiscover() 
