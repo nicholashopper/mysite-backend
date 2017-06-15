@@ -14,12 +14,12 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 from django.conf.urls import url, include
-from django.contrib import admin
+from captcha_admin import admin
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.views.generic import TemplateView
 urlpatterns = [
     url(r'^api/', include('blog.urls')),
-    url(r'^admin.*', admin.site.urls),
+    url(r'^admin/', admin.site.urls),
 ]
 
 admin.autodiscover() 

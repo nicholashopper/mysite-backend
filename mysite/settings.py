@@ -20,10 +20,15 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'voopyxsb8#@xmn4)g!oup8@b-^@@6*o&(@$-ge6n)p%+ewxe9j'
+SECRET_KEY = 'voopyxsb8#@xmn4)g!oup8@b-^@@6*o&(@$-ge6n)p%+ewxe9j' # Use these only for dev! Switched out in production
+
+
+RECAPTCHA_PUBLIC_KEY = '6LdnjCUUAAAAAFx4ELcCpT7hzjLgqptRaFm27aRj' # Use these only for dev! Switched out in production
+RECAPTCHA_PRIVATE_KEY = '6LdnjCUUAAAAAK9FTZDkZzkXqeS3Wxe4DUPFcyVQ' # Use these only for dev! Switched out in production
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+NOCAPTCHA = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -41,6 +46,8 @@ INSTALLED_APPS = [
     'races',
     'rest_framework',
     'corsheaders',
+    'captcha_admin',
+    'captcha',
 ]
 
 MIDDLEWARE = [
@@ -122,3 +129,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+    'static/',
+]
+STATIC_ROOT = "~/Projects/mysite-server/app/static/"
