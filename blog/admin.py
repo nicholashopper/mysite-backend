@@ -1,4 +1,4 @@
-from django.contrib import admin
+from captcha_admin import admin
 
 from .models import *
 

@@ -1,5 +1,5 @@
 /*
-    DJANGO Admin styles
+    DJANGO Admin stylesv2
 */
 
 @import url(fonts.css);
@@ -447,7 +447,7 @@ select[multiple] {
 /* FORM BUTTONS */
 
 .button, input[type=submit], input[type=button], .submit-row input, a.button {
-    background: #79aec8;
+    background: #21735f;
     padding: 10px 15px;
     border: none;
     border-radius: 4px;
@@ -473,7 +473,7 @@ a.button {
     float: right;
     border: none;
     font-weight: 400;
-    background: #417690;
+    background: #342817;
 }
 
 .button.default:active, input[type=submit].default:active,
@@ -520,7 +520,7 @@ input[type=button][disabled].default {
     font-weight: 400;
     font-size: 13px;
     text-align: left;
-    background: #79aec8;
+    background: #21735f;
     color: #fff;
 }
 
@@ -644,7 +644,7 @@ div.system-message p.system-message-title {
 /* BREADCRUMBS */
 
 div.breadcrumbs {
-    background: #79aec8;
+    background: #21735f;
     padding: 10px 40px;
     border: none;
     font-size: 14px;
@@ -729,7 +729,7 @@ a.deletelink:focus, a.deletelink:hover {
 }
 
 .object-tools a:focus, .object-tools a:hover {
-    background-color: #417690;
+    background-color: #342817;
 }
 
 .object-tools a:focus{
@@ -824,7 +824,7 @@ table#change-history tbody th {
     width: auto;
     height: 40px;
     padding: 10px 40px;
-    background: #417690;
+    background: #342817;
     line-height: 40px;
     color: #ffc;
     overflow: hidden;
@@ -883,8 +883,8 @@ table#change-history tbody th {
 
 #user-tools a:focus, #user-tools a:hover {
     text-decoration: none;
-    border-bottom-color: #79aec8;
-    color: #79aec8;
+    border-bottom-color: #21735f;
+    color: #21735f;
 }
 
 /* SIDEBAR */
