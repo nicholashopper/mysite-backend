@@ -2,3 +2,5 @@ django
 djangorestframework
 django-webpack-loader
 django-cors-headers
+django-captcha-admin
+django-recaptcha
