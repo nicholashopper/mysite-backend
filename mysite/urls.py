@@ -18,10 +18,11 @@ from captcha_admin import admin
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.views.generic import TemplateView
 
-admin.site.site_title = admin.site.site_header = admin.site.index_title = 'Nicholas Works'
+admin.site.site_title = admin.site.index_title = 'Nicholas Works'
+admin.site.site_header = 'Administration'
 
 urlpatterns = [
-    url(r'^api/', include('blog.urls')),
+    url(r'^api/', include('content.urls')),
     url(r'^admin/', admin.site.urls),
 ]
 

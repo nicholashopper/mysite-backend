@@ -1,13 +1,13 @@
 from rest_framework import serializers
-from .models import Blog, Category
+from .models import *
 
-class BlogSerializer(serializers.ModelSerializer):
+class ContentSerializer(serializers.ModelSerializer):
     """Serializer to map the Model instance into JSON format."""
-
+    category = serializers.StringRelatedField()
     class Meta:
         """Meta class to map serializer's fields with the model fields."""
-        model = Blog
-        fields = ('title', 'slug', 'body', 'posted', 'category')
+        model = Content
+        fields = ('purpose', 'title', 'slug', 'body', 'posted', 'category')
 
 class CategorySerializer(serializers.ModelSerializer):
     """Serializer to map the Model instance into JSON format."""
@@ -15,4 +15,4 @@ class CategorySerializer(serializers.ModelSerializer):
     class Meta:
         """Meta class to map serializer's fields with the model fields."""
         model = Category
-        fields = ('title', 'slug')
+        fields = '__all__'
