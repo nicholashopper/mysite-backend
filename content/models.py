@@ -11,8 +11,8 @@ CONTENT_TYPE = (
 class Content(models.Model):
     purpose = models.CharField(max_length=10, choices=CONTENT_TYPE)
     title = models.CharField(max_length=100, unique=True)
-    slug = models.SlugField(max_length=100, unique=True)
-    body = models.TextField()
+    slug = models.SlugField(max_length=100, unique=True, help_text="This is the url extension.")
+    body = models.TextField(help_text="Full HTML allowed. Keep headers at h2 or smaller.")
     posted = models.DateTimeField(db_index=True, auto_now_add=True)
     category = models.ForeignKey('content.Category',blank=True,null=True)
 
