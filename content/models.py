@@ -5,6 +5,7 @@ from django.db.models import permalink
 CONTENT_TYPE = (
     ('blog', 'Blog Post'),
     ('project', 'Project'),
+    ('info', 'Info'),
 )
 
 
